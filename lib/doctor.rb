@@ -1,6 +1,6 @@
 class Doctor
   
-  attr_accessor :name
+  attr_accessor :name, :appointments
   
   @@all = []
   
@@ -17,7 +17,9 @@ class Doctor
   end
   
   def patients
-    
+    appointments.all.select do |song|
+      song.artist == self
+    end
   end
   
 end
