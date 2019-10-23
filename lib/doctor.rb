@@ -6,6 +6,8 @@ class Doctor
   
   def initialize(name)
     @name = name
+    @appointments = []
+    @@all << self
   end
   
   def self.all
@@ -17,7 +19,7 @@ class Doctor
   end
   
   def patients
-    appointments.all.select do |song|
+    appointments.all.collect do |appointment|
       song.artist == self
     end
   end
