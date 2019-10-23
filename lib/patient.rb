@@ -18,4 +18,8 @@ class Patient
     new_appointment = Appointment.new()
   end
   
+  def appointments
+    
+  end
+  
 end
